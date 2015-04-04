@@ -1,0 +1,105 @@
+\hypertarget{classAsSQL}{\section{As\-S\-Q\-L Class Reference}
+\label{classAsSQL}\index{As\-S\-Q\-L@{As\-S\-Q\-L}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAsSQL_a36e47e4a2da43c26271fcd4e778aceb5}{get\-Connector} ()
+\item 
+\hyperlink{classAsSQL_a306484f4002d7f3389c980f45368fb40}{\-\_\-\-\_\-construct} (\$str\-Host= '', \$str\-Username= '', \$str\-Password= '', \$str\-Db= '', \$int\-Port=-\/1, \$str\-Sock= '')
+\item 
+\hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{begin\-Query} (\$str\-Sql, \$func\-Callback, \$obj\-Tag)
+\item 
+\hyperlink{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}{end\-Query} (\$obj\-Async\-Result)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A wrapper for mysqli connections to allow easier use of asynchronous queries. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAsSQL_a306484f4002d7f3389c980f45368fb40}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!AsSQL@{As\-S\-Q\-L}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$str\-Host = {\ttfamily ''}, }
+\item[{}]{\$str\-Username = {\ttfamily ''}, }
+\item[{}]{\$str\-Password = {\ttfamily ''}, }
+\item[{}]{\$str\-Db = {\ttfamily ''}, }
+\item[{}]{\$int\-Port = {\ttfamily -\/1}, }
+\item[{}]{\$str\-Sock = {\ttfamily ''}}
+\end{DoxyParamCaption}
+)}}\label{classAsSQL_a306484f4002d7f3389c980f45368fb40}
+Creates a new instance of an \hyperlink{classAsSQL}{As\-S\-Q\-L} object and connects to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$str\-Host} & The My\-S\-Q\-L host. \\
+\hline
+{\em \$str\-Username} & The username of the My\-S\-Q\-L user. \\
+\hline
+{\em \$str\-Password} & The password of the My\-S\-Q\-L user. \\
+\hline
+{\em \$str\-Db} & The name of the My\-S\-Q\-L database. \\
+\hline
+{\em \$int\-Port} & The port that the My\-S\-Q\-L database server is running on. \\
+\hline
+{\em \$str\-Sock} & Specifies the socket or named pipe that should be used. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!begin\-Query@{begin\-Query}}
+\index{begin\-Query@{begin\-Query}!AsSQL@{As\-S\-Q\-L}}
+\subsubsection[{begin\-Query}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::begin\-Query (
+\begin{DoxyParamCaption}
+\item[{}]{\$str\-Sql, }
+\item[{}]{\$func\-Callback, }
+\item[{}]{\$obj\-Tag}
+\end{DoxyParamCaption}
+)}}\label{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}
+Begins a My\-S\-Q\-L query.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$str\-Sql} & The S\-Q\-L query to process. \\
+\hline
+{\em \$func\-Callback} & The callback function to call once the query is complete and we have a result. \\
+\hline
+{\em \$obj\-Tag} & An object to put in the resulting \hyperlink{classAsyncResult}{Async\-Result} object, which can be collected by the callback function. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!end\-Query@{end\-Query}}
+\index{end\-Query@{end\-Query}!AsSQL@{As\-S\-Q\-L}}
+\subsubsection[{end\-Query}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::end\-Query (
+\begin{DoxyParamCaption}
+\item[{}]{\$obj\-Async\-Result}
+\end{DoxyParamCaption}
+)}}\label{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}
+Ends a My\-S\-Q\-L query.
+
+Any exception that happened during the query, of type mysqli\-\_\-sql\-\_\-exception, will be thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-Async\-Result} & The async result object representing the finished query. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAsSQL_a36e47e4a2da43c26271fcd4e778aceb5}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!get\-Connector@{get\-Connector}}
+\index{get\-Connector@{get\-Connector}!AsSQL@{As\-S\-Q\-L}}
+\subsubsection[{get\-Connector}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::get\-Connector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAsSQL_a36e47e4a2da43c26271fcd4e778aceb5}
+Gets the underlying My\-S\-Q\-Li object which represents the connection.
+
+\begin{DoxyReturn}{Returns}
+The underlying My\-S\-Q\-Li object which respresents the connection. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/As\-S\-Q\-L.\-php\end{DoxyCompactItemize}

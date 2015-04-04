@@ -1,0 +1,72 @@
+\hypertarget{classAsyncResult}{\section{Async\-Result Class Reference}
+\label{classAsyncResult}\index{Async\-Result@{Async\-Result}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAsyncResult_a00fc9c765d0c13fece6f70e512c697a4}{get\-Tag} ()
+\item 
+\hyperlink{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}{\-\_\-\-\_\-construct} (\$obj\-My\-S\-Q\-L\-Result, \$obj\-Tag, \$obj\-Exp)
+\item 
+\hyperlink{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}{end} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the result of the finished S\-Q\-L query. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}{\index{Async\-Result@{Async\-Result}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!AsyncResult@{Async\-Result}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}Async\-Result\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$obj\-My\-S\-Q\-L\-Result, }
+\item[{}]{\$obj\-Tag, }
+\item[{}]{\$obj\-Exp}
+\end{DoxyParamCaption}
+)}}\label{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}
+Creates a new instance of an \hyperlink{classAsyncResult}{Async\-Result} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-My\-S\-Q\-L\-Result} & The result from the My\-S\-Q\-L query. \\
+\hline
+{\em \$obj\-Tag} & The tag specified in the call to \hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{As\-S\-Q\-L\-::begin\-Query()}. \\
+\hline
+{\em \$obj\-Exp} & Any exception that occurred during the query. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}{\index{Async\-Result@{Async\-Result}!end@{end}}
+\index{end@{end}!AsyncResult@{Async\-Result}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Async\-Result\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}
+Signals an end to the query.
+
+This will throw any exception which happened during the query, of type mysqli\-\_\-sql\-\_\-exception.
+
+\begin{DoxyReturn}{Returns}
+The result of the My\-S\-Q\-L query. 
+\end{DoxyReturn}
+\hypertarget{classAsyncResult_a00fc9c765d0c13fece6f70e512c697a4}{\index{Async\-Result@{Async\-Result}!get\-Tag@{get\-Tag}}
+\index{get\-Tag@{get\-Tag}!AsyncResult@{Async\-Result}}
+\subsubsection[{get\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}Async\-Result\-::get\-Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAsyncResult_a00fc9c765d0c13fece6f70e512c697a4}
+Gets the tag specified in the call to \hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{As\-S\-Q\-L\-::begin\-Query()}.
+
+\begin{DoxyReturn}{Returns}
+The tag specified in the call to \hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{As\-S\-Q\-L\-::begin\-Query()}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/Async\-Result.\-php\end{DoxyCompactItemize}

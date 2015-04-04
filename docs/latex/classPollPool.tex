@@ -1,0 +1,54 @@
+\hypertarget{classPollPool}{\section{Poll\-Pool Class Reference}
+\label{classPollPool}\index{Poll\-Pool@{Poll\-Pool}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classPollPool_ae8008530e681c7eef4caf3c693fbc74b}{add} (\$obj\-Poll)
+\item 
+static \hyperlink{classPollPool_ae1e9600e331afe8e055fe2940de205f6}{poll} (\$int\-Sec=0, \$int\-U\-Sec=100)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the poll pool, which utilises the polling of all of the pending asynchronous My\-S\-Q\-L queries. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPollPool_ae8008530e681c7eef4caf3c693fbc74b}{\index{Poll\-Pool@{Poll\-Pool}!add@{add}}
+\index{add@{add}!PollPool@{Poll\-Pool}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}static Poll\-Pool\-::add (
+\begin{DoxyParamCaption}
+\item[{}]{\$obj\-Poll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classPollPool_ae8008530e681c7eef4caf3c693fbc74b}
+Adds a \hyperlink{classPollState}{Poll\-State} to the pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-Poll} & The \hyperlink{classPollState}{Poll\-State} object to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPollPool_ae1e9600e331afe8e055fe2940de205f6}{\index{Poll\-Pool@{Poll\-Pool}!poll@{poll}}
+\index{poll@{poll}!PollPool@{Poll\-Pool}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}static Poll\-Pool\-::poll (
+\begin{DoxyParamCaption}
+\item[{}]{\$int\-Sec = {\ttfamily 0}, }
+\item[{}]{\$int\-U\-Sec = {\ttfamily 100}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classPollPool_ae1e9600e331afe8e055fe2940de205f6}
+Polls all of the connections in the pool.
+
+This needs to be called periodically, either in a loop or in a tick function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$int\-Sec} & The amount of seconds to wait before continuing (default = 0 sec). \\
+\hline
+{\em \$int\-U\-Sec} & The amount of milliseconds to wait before continuing if nothing happens (default = 100 usec) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/Poll\-Pool.\-php\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{classPollState}{\section{Poll\-State Class Reference}
+\label{classPollState}\index{Poll\-State@{Poll\-State}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPollState_ab83dc50a315fdd79ddddfb82b68a39c5}{get\-Wrapper} ()
+\item 
+\hyperlink{classPollState_a63855e4ec33c70bb5b2f0bafdf7a7daf}{get\-Connector} ()
+\item 
+\hyperlink{classPollState_a5e2eaa4d149e84f9a75dbe42d4f2eabb}{\-\_\-\-\_\-construct} (\$obj\-Wrapper, \$func\-Callback, \$obj\-Tag)
+\item 
+\hyperlink{classPollState_a6fea8e4d50fd0ff15a53ed7232f2685b}{callback} (\$obj\-My\-S\-Q\-L\-Result, \$obj\-Exp=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the state of a My\-S\-Q\-L link whilst being polled. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPollState_a5e2eaa4d149e84f9a75dbe42d4f2eabb}{\index{Poll\-State@{Poll\-State}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!PollState@{Poll\-State}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}Poll\-State\-::\-\_\-\-\_\-construct (
+\begin{DoxyParamCaption}
+\item[{}]{\$obj\-Wrapper, }
+\item[{}]{\$func\-Callback, }
+\item[{}]{\$obj\-Tag}
+\end{DoxyParamCaption}
+)}}\label{classPollState_a5e2eaa4d149e84f9a75dbe42d4f2eabb}
+Creates a new instance of a \hyperlink{classPollState}{Poll\-State} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-Wrapper} & An \hyperlink{classAsSQL}{As\-S\-Q\-L} wrapper for the My\-S\-Q\-Li connector. \\
+\hline
+{\em \$func\-Callback} & The callback function to call when the query has been completed. \\
+\hline
+{\em \$obj\-Tag} & The tag specified in the call to \hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd96c0da91}{As\-S\-Q\-L\-::begin\-Query()}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPollState_a6fea8e4d50fd0ff15a53ed7232f2685b}{\index{Poll\-State@{Poll\-State}!callback@{callback}}
+\index{callback@{callback}!PollState@{Poll\-State}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}Poll\-State\-::callback (
+\begin{DoxyParamCaption}
+\item[{}]{\$obj\-My\-S\-Q\-L\-Result, }
+\item[{}]{\$obj\-Exp = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{classPollState_a6fea8e4d50fd0ff15a53ed7232f2685b}
+Creates a new \hyperlink{classAsyncResult}{Async\-Result} and calls the callback function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-My\-S\-Q\-L\-Result} & The result of the My\-S\-Q\-L query. \\
+\hline
+{\em \$obj\-Exp} & Any exception that occured, of type mysqli\-\_\-sql\-\_\-exception, during the My\-S\-Q\-L query. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPollState_a63855e4ec33c70bb5b2f0bafdf7a7daf}{\index{Poll\-State@{Poll\-State}!get\-Connector@{get\-Connector}}
+\index{get\-Connector@{get\-Connector}!PollState@{Poll\-State}}
+\subsubsection[{get\-Connector}]{\setlength{\rightskip}{0pt plus 5cm}Poll\-State\-::get\-Connector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPollState_a63855e4ec33c70bb5b2f0bafdf7a7daf}
+Gets the underlying My\-S\-Q\-Li connector.
+
+\begin{DoxyReturn}{Returns}
+The underlying My\-S\-Q\-Li connector. 
+\end{DoxyReturn}
+\hypertarget{classPollState_ab83dc50a315fdd79ddddfb82b68a39c5}{\index{Poll\-State@{Poll\-State}!get\-Wrapper@{get\-Wrapper}}
+\index{get\-Wrapper@{get\-Wrapper}!PollState@{Poll\-State}}
+\subsubsection[{get\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}Poll\-State\-::get\-Wrapper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPollState_ab83dc50a315fdd79ddddfb82b68a39c5}
+Gets the \hyperlink{classAsSQL}{As\-S\-Q\-L} wrapper for the link.
+
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classAsSQL}{As\-S\-Q\-L} wrapper for the link. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/Poll\-State.\-php\end{DoxyCompactItemize}
