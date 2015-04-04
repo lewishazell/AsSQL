@@ -4,7 +4,7 @@ A library which aims to make asynchronous MySQL queries in PHP easier.
 ## Why did you create this?
 PHP supports asynchronous MySQL queries with MySQLi (that is, non-blocking asynchronous I/O on the sockets). It's a nice feature; but I found it difficult to manage, having to poll all waiting connections. The aim with this is to be able to enable the programmer to begin the query with a specified anonymous callback function which will be automatically called once the query is complete and polled.
 
-## Details you need to knowt
+## Details you need to know
 This library requires *mysqlnd* (mysql native driver), as asynchronous MySQL is not supported in the default driver!
 
 Ideally, we'd have a second thread which waits for activity on all of the connections. Unfortunately, we don't have the luxury of userland threads in PHP (unless you want to try pthreads and make this threadsafe - go ahead). Because of this, you will need to have something in your code which will periodically check the status of the queries.
