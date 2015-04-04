@@ -78,6 +78,13 @@ final class AsSQL {
         $this->blnProcessing = false;
         return $objAsyncResult->end();
     }
+
+    /**
+     * Closes the connection to the database.
+     */
+    public function close() {
+        $this->objConnector()->close();
+    }
  
 }
 
