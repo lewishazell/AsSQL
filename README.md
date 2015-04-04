@@ -67,5 +67,5 @@ Once this query is completed and polled `$funcCallback`, as defined earlier, wil
 ## Can I still do my regular synchronous queries?
 Yes! Like so:
 ```php
-$objResult = $objSQL->getConnector->query('SELECT name, surname FROM customers WHERE CID=11');
+$objResult = $objSQL->getConnector()->query('SELECT name, surname FROM customers WHERE CID=11');
 ```
