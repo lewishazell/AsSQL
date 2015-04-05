@@ -12,6 +12,7 @@ final class AsyncResult {
     private $objTag; //< The tag specified in the call to AsSQL::beginQuery()
     private $objExp; //< Any exception that occurred during the query.
     private $objMySQLResult; //< The query result.
+    private $objState;
 
     /**
      * Gets the tag specified in the call to AsSQL::beginQuery().
@@ -33,8 +34,9 @@ final class AsyncResult {
      * @param $objExp
      *  Any exception that occurred during the query.
      */
-    public function __construct($objMySQLResult, $objTag, $objExp) {
+    public function __construct($objMySQLResult, $objState, $objTag, $objExp) {
         $this->objMySQLResult = $objMySQLResult;
+        $this->objState = $objState;
         $this->objTag = $objTag;
         $this->objExp = $objExp;
     }
@@ -42,14 +44,20 @@ final class AsyncResult {
     /**
      * Signals an end to the query.
      *
-     * This will throw any exception which happened during the query, of type mysqli_sql_exception.
+     * If you are a user of this library; use AsSQL::endQuery() to end a query and not this function!
+     *
+     * @param $objState
+     *  The PollState object used in the query. Required so that only AsSQL::endQuery() can end a query.
      *
      * @return
      *  The result of the MySQL query.
      */
-    public function end() {
-        if($this->objExp != null) throw $this->objExp;
-        return $this->objMySQLResult;
+    public function end($objState) {
+        if($objState == $this->objState) {
+            if($this->objExp != null) throw $this->objExp;
+            return $this->objMySQLResult;
+        }
+        return false;
     }
 }
 

@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -76,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>__construct()
 : <a class="el" href="classAsSQL.html#a306484f4002d7f3389c980f45368fb40">AsSQL</a>
 , <a class="el" href="classPollState.html#a5e2eaa4d149e84f9a75dbe42d4f2eabb">PollState</a>
-, <a class="el" href="classAsyncResult.html#a78268c811cf7ee3de669ad835fd7107d">AsyncResult</a>
+, <a class="el" href="classAsyncResult.html#a3961d54630c2a2064159ad890c040ae2">AsyncResult</a>
 </li>
 <li>add()
 : <a class="el" href="classPollPool.html#ae8008530e681c7eef4caf3c693fbc74b">PollPool</a>
@@ -101,8 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>callback()
 : <a class="el" href="classPollState.html#a6fea8e4d50fd0ff15a53ed7232f2685b">PollState</a>
 </li>
+<li>close()
+: <a class="el" href="classAsSQL.html#aa8ed93e156248c5aea36ac417ceb855f">AsSQL</a>
+</li>
 <li>end()
-: <a class="el" href="classAsyncResult.html#a26b3ca41ea05ec7b9015f6f38e669cc7">AsyncResult</a>
+: <a class="el" href="classAsyncResult.html#ab337698e9e430db119e9f6b62ac5e9f1">AsyncResult</a>
 </li>
 <li>endQuery()
 : <a class="el" href="classAsSQL.html#a0f9c3738d7298dfbf2c0b0a0d900cee2">AsSQL</a>
@@ -124,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2015 12:57:13 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 5 2015 10:11:52 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

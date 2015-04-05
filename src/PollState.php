@@ -58,7 +58,7 @@ final class PollState {
      *  Any exception that occured, of type mysqli_sql_exception, during the MySQL query.
      */
     public function callback($objMySQLResult, $objExp = null) {
-        $objAsyncResult = new AsyncResult($objMySQLResult, $this->objTag, $objExp);
+        $objAsyncResult = new AsyncResult($objMySQLResult, $this, $this->objTag, $objExp);
         $funcCallback = $this->funcCallback;
         $funcCallback($objAsyncResult);
     }

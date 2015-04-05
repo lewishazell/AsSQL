@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,13 +92,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a00fc9c765d0c13fece6f70e512c697a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncResult.html#a00fc9c765d0c13fece6f70e512c697a4">getTag</a> ()</td></tr>
-<tr class="memitem:a78268c811cf7ee3de669ad835fd7107d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncResult.html#a78268c811cf7ee3de669ad835fd7107d">__construct</a> ($objMySQLResult, $objTag, $objExp)</td></tr>
-<tr class="memitem:a26b3ca41ea05ec7b9015f6f38e669cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncResult.html#a26b3ca41ea05ec7b9015f6f38e669cc7">end</a> ()</td></tr>
+<tr class="memitem:a3961d54630c2a2064159ad890c040ae2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncResult.html#a3961d54630c2a2064159ad890c040ae2">__construct</a> ($objMySQLResult, $objState, $objTag, $objExp)</td></tr>
+<tr class="memitem:ab337698e9e430db119e9f6b62ac5e9f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncResult.html#ab337698e9e430db119e9f6b62ac5e9f1">end</a> ($objState)</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents the result of the finished SQL query. </p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a78268c811cf7ee3de669ad835fd7107d"></a>
+<a class="anchor" id="a3961d54630c2a2064159ad890c040ae2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -106,6 +107,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>$objMySQLResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$objState</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -139,20 +146,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2>Member Function Documentation</h2>
-<a class="anchor" id="a26b3ca41ea05ec7b9015f6f38e669cc7"></a>
+<a class="anchor" id="ab337698e9e430db119e9f6b62ac5e9f1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">AsyncResult::end </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$objState</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Signals an end to the query.</p>
-<p>This will throw any exception which happened during the query, of type mysqli_sql_exception.</p>
+<p>If you are a user of this library; use <a class="el" href="classAsSQL.html#a0f9c3738d7298dfbf2c0b0a0d900cee2">AsSQL::endQuery()</a> to end a query and not this function!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$objState</td><td>The <a class="el" href="classPollState.html">PollState</a> object used in the query. Required so that only <a class="el" href="classAsSQL.html#a0f9c3738d7298dfbf2c0b0a0d900cee2">AsSQL::endQuery()</a> can end a query.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The result of the MySQL query. </dd></dl>
 
 </div>
@@ -175,12 +189,12 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/AsyncResult.php</li>
+<li>src/<a class="el" href="AsyncResult_8php.html">AsyncResult.php</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2015 12:57:12 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 5 2015 10:11:51 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

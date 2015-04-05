@@ -10,7 +10,7 @@
  */
 final class AsSQL {
     private $objConnector; //< Underlying MySQLi object, representing the connection.
-    private $blnProcessing = false; //< Whether a query is currently being processed on this wrapper (only one can should be done at any time).
+    private $objState = null;
 
     /**
      * Gets the underlying MySQLi object which represents the connection.
@@ -58,11 +58,10 @@ final class AsSQL {
      *  An object to put in the resulting AsyncResult object, which can be collected by the callback function.
      */
     public function beginQuery($strSql, $funcCallback, $objTag) {
-        if($this->blnProcessing == false) {
-            $this->blnProcessing = true;
+        if($this->objState == null) {
             $this->objConnector->query($strSql, MYSQLI_ASYNC);
-            $objState = new PollState($this, $funcCallback, $objTag);
-            PollPool::add($objState);
+            $this->objState = new PollState($this, $funcCallback, $objTag);
+            PollPool::add($this->objState);
         }
     }
 
@@ -75,8 +74,10 @@ final class AsSQL {
      *  The async result object representing the finished query.
      */
     public function endQuery($objAsyncResult) {
-        $this->blnProcessing = false;
-        return $objAsyncResult->end();
+        if($this->objState != null && $objResult = $objAsyncResult->end($this->objState)) {
+            $this->objState = null;
+            return $objResult;
+        }
     }
 
     /**

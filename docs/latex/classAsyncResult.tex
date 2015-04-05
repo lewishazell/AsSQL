@@ -6,9 +6,9 @@
 \item 
 \hyperlink{classAsyncResult_a00fc9c765d0c13fece6f70e512c697a4}{get\-Tag} ()
 \item 
-\hyperlink{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}{\-\_\-\-\_\-construct} (\$obj\-My\-S\-Q\-L\-Result, \$obj\-Tag, \$obj\-Exp)
+\hyperlink{classAsyncResult_a3961d54630c2a2064159ad890c040ae2}{\-\_\-\-\_\-construct} (\$obj\-My\-S\-Q\-L\-Result, \$obj\-State, \$obj\-Tag, \$obj\-Exp)
 \item 
-\hyperlink{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}{end} ()
+\hyperlink{classAsyncResult_ab337698e9e430db119e9f6b62ac5e9f1}{end} (\$obj\-State)
 \end{DoxyCompactItemize}
 
 
@@ -16,15 +16,16 @@
 Represents the result of the finished S\-Q\-L query. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}{\index{Async\-Result@{Async\-Result}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\hypertarget{classAsyncResult_a3961d54630c2a2064159ad890c040ae2}{\index{Async\-Result@{Async\-Result}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
 \index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!AsyncResult@{Async\-Result}}
 \subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}Async\-Result\-::\-\_\-\-\_\-construct (
 \begin{DoxyParamCaption}
 \item[{}]{\$obj\-My\-S\-Q\-L\-Result, }
+\item[{}]{\$obj\-State, }
 \item[{}]{\$obj\-Tag, }
 \item[{}]{\$obj\-Exp}
 \end{DoxyParamCaption}
-)}}\label{classAsyncResult_a78268c811cf7ee3de669ad835fd7107d}
+)}}\label{classAsyncResult_a3961d54630c2a2064159ad890c040ae2}
 Creates a new instance of an \hyperlink{classAsyncResult}{Async\-Result} object.
 
 
@@ -39,17 +40,22 @@ Creates a new instance of an \hyperlink{classAsyncResult}{Async\-Result} object.
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}{\index{Async\-Result@{Async\-Result}!end@{end}}
+\hypertarget{classAsyncResult_ab337698e9e430db119e9f6b62ac5e9f1}{\index{Async\-Result@{Async\-Result}!end@{end}}
 \index{end@{end}!AsyncResult@{Async\-Result}}
 \subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Async\-Result\-::end (
 \begin{DoxyParamCaption}
-{}
+\item[{}]{\$obj\-State}
 \end{DoxyParamCaption}
-)}}\label{classAsyncResult_a26b3ca41ea05ec7b9015f6f38e669cc7}
+)}}\label{classAsyncResult_ab337698e9e430db119e9f6b62ac5e9f1}
 Signals an end to the query.
 
-This will throw any exception which happened during the query, of type mysqli\-\_\-sql\-\_\-exception.
+If you are a user of this library; use \hyperlink{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}{As\-S\-Q\-L\-::end\-Query()} to end a query and not this function!
 
+
+\begin{DoxyParams}{Parameters}
+{\em \$obj\-State} & The \hyperlink{classPollState}{Poll\-State} object used in the query. Required so that only \hyperlink{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}{As\-S\-Q\-L\-::end\-Query()} can end a query.\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The result of the My\-S\-Q\-L query. 
 \end{DoxyReturn}
@@ -69,4 +75,4 @@ The tag specified in the call to \hyperlink{classAsSQL_a4768f01dcde0f9ff4205bffd
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 
-src/Async\-Result.\-php\end{DoxyCompactItemize}
+src/\hyperlink{AsyncResult_8php}{Async\-Result.\-php}\end{DoxyCompactItemize}

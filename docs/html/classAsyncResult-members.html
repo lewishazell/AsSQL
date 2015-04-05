@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,13 +88,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classAsyncResult.html">AsyncResult</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classAsyncResult.html#a78268c811cf7ee3de669ad835fd7107d">__construct</a>($objMySQLResult, $objTag, $objExp)</td><td class="entry"><a class="el" href="classAsyncResult.html">AsyncResult</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAsyncResult.html#a26b3ca41ea05ec7b9015f6f38e669cc7">end</a>()</td><td class="entry"><a class="el" href="classAsyncResult.html">AsyncResult</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAsyncResult.html#a3961d54630c2a2064159ad890c040ae2">__construct</a>($objMySQLResult, $objState, $objTag, $objExp)</td><td class="entry"><a class="el" href="classAsyncResult.html">AsyncResult</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAsyncResult.html#ab337698e9e430db119e9f6b62ac5e9f1">end</a>($objState)</td><td class="entry"><a class="el" href="classAsyncResult.html">AsyncResult</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAsyncResult.html#a00fc9c765d0c13fece6f70e512c697a4">getTag</a>()</td><td class="entry"><a class="el" href="classAsyncResult.html">AsyncResult</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 4 2015 12:57:12 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 5 2015 10:11:51 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
