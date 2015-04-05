@@ -95,6 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a306484f4002d7f3389c980f45368fb40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsSQL.html#a306484f4002d7f3389c980f45368fb40">__construct</a> ($strHost= '', $strUsername= '', $strPassword= '', $strDb= '', $intPort=-1, $strSock= '')</td></tr>
 <tr class="memitem:a4768f01dcde0f9ff4205bffd96c0da91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsSQL.html#a4768f01dcde0f9ff4205bffd96c0da91">beginQuery</a> ($strSql, $funcCallback, $objTag)</td></tr>
 <tr class="memitem:a0f9c3738d7298dfbf2c0b0a0d900cee2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsSQL.html#a0f9c3738d7298dfbf2c0b0a0d900cee2">endQuery</a> ($objAsyncResult)</td></tr>
+<tr class="memitem:a1e16922a0951d32f12749df552455844"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsSQL.html#a1e16922a0951d32f12749df552455844">escape</a> ($strEscape)</td></tr>
 <tr class="memitem:aa8ed93e156248c5aea36ac417ceb855f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsSQL.html#aa8ed93e156248c5aea36ac417ceb855f">close</a> ()</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -244,6 +245,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1e16922a0951d32f12749df552455844"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AsSQL::escape </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$strEscape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection.</p>
+<p>Passthrough to real_escape_string on the underlying MySQLi connector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$strEscape</td><td>The string to be escaped.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns an escaped string. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a36e47e4a2da43c26271fcd4e778aceb5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +293,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 5 2015 10:11:51 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 5 2015 20:42:12 for AsSQL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

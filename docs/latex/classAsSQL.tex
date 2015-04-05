@@ -12,6 +12,8 @@
 \item 
 \hyperlink{classAsSQL_a0f9c3738d7298dfbf2c0b0a0d900cee2}{end\-Query} (\$obj\-Async\-Result)
 \item 
+\hyperlink{classAsSQL_a1e16922a0951d32f12749df552455844}{escape} (\$str\-Escape)
+\item 
 \hyperlink{classAsSQL_aa8ed93e156248c5aea36ac417ceb855f}{close} ()
 \end{DoxyCompactItemize}
 
@@ -95,6 +97,25 @@ Any exception that happened during the query, of type mysqli\-\_\-sql\-\_\-excep
 {\em \$obj\-Async\-Result} & The async result object representing the finished query. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classAsSQL_a1e16922a0951d32f12749df552455844}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!escape@{escape}}
+\index{escape@{escape}!AsSQL@{As\-S\-Q\-L}}
+\subsubsection[{escape}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::escape (
+\begin{DoxyParamCaption}
+\item[{}]{\$str\-Escape}
+\end{DoxyParamCaption}
+)}}\label{classAsSQL_a1e16922a0951d32f12749df552455844}
+Escapes special characters in a string for use in an S\-Q\-L statement, taking into account the current charset of the connection.
+
+Passthrough to real\-\_\-escape\-\_\-string on the underlying My\-S\-Q\-Li connector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$str\-Escape} & The string to be escaped.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an escaped string. 
+\end{DoxyReturn}
 \hypertarget{classAsSQL_a36e47e4a2da43c26271fcd4e778aceb5}{\index{As\-S\-Q\-L@{As\-S\-Q\-L}!get\-Connector@{get\-Connector}}
 \index{get\-Connector@{get\-Connector}!AsSQL@{As\-S\-Q\-L}}
 \subsubsection[{get\-Connector}]{\setlength{\rightskip}{0pt plus 5cm}As\-S\-Q\-L\-::get\-Connector (

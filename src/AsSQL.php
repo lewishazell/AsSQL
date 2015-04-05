@@ -81,10 +81,25 @@ final class AsSQL {
     }
 
     /**
+     *  Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection.
+     *
+     *  Passthrough to real_escape_string on the underlying MySQLi connector.
+     *
+     * @param $strEscape
+     *  The string to be escaped. 
+     *
+     * @return
+     *  Returns an escaped string.
+     */
+    public function escape($strEscape) {
+        return $this->objConnector->real_escape_string($strEscape);
+    }
+
+    /**
      * Closes the connection to the database.
      */
     public function close() {
-        $this->objConnector()->close();
+        $this->objConnector->close();
     }
  
 }
