@@ -4,6 +4,8 @@
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+static \hyperlink{classPollPool_ae4e298252e9945212c70a2453dff2a5a}{get\-Count} ()
+\item 
 static \hyperlink{classPollPool_ae8008530e681c7eef4caf3c693fbc74b}{add} (\$obj\-Poll)
 \item 
 static \hyperlink{classPollPool_ae1e9600e331afe8e055fe2940de205f6}{poll} (\$int\-Sec=0, \$int\-U\-Sec=100)
@@ -28,6 +30,18 @@ Adds a \hyperlink{classPollState}{Poll\-State} to the pool.
 {\em \$obj\-Poll} & The \hyperlink{classPollState}{Poll\-State} object to add. \\
 \hline
 \end{DoxyParams}
+\hypertarget{classPollPool_ae4e298252e9945212c70a2453dff2a5a}{\index{Poll\-Pool@{Poll\-Pool}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!PollPool@{Poll\-Pool}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}static Poll\-Pool\-::get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classPollPool_ae4e298252e9945212c70a2453dff2a5a}
+Gets the amount of asynchronous My\-S\-Q\-L queries that are processing in the pool.
+
+\begin{DoxyReturn}{Returns}
+The amount of asynchronous My\-S\-Q\-L queries that are processing in the pool. 
+\end{DoxyReturn}
 \hypertarget{classPollPool_ae1e9600e331afe8e055fe2940de205f6}{\index{Poll\-Pool@{Poll\-Pool}!poll@{poll}}
 \index{poll@{poll}!PollPool@{Poll\-Pool}}
 \subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}static Poll\-Pool\-::poll (
