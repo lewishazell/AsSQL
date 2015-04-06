@@ -12,6 +12,16 @@ final class PollPool {
     private static $arrPolling = array(); //< An array of all of PollStates, containing connections with pending queries.
 
     /**
+     * Gets the amount of asynchronous MySQL queries that are processing in the pool.
+     *
+     * @returns
+     *  The amount of asynchronous MySQL queries that are processing in the pool.
+     */
+    public static function getCount() {
+        return count(self::$arrPolling);
+    }
+
+    /**
      * Adds a PollState to the pool.
      *
      * @param $objPoll
